@@ -9,6 +9,8 @@ and sends orders to be drop shipped via printful (APIVER 2017-10).
 - Printful specific logic is contained in `utils/printful.js`
 - Rendering logic for composing pictures is in `utils/renderer.js`
 - Artwork is located in `src_images`
+- Files compiled to normal javascript from ES6 are found in `dist/`
+- - NOTE: NEVER EDIT THESE FILES, EDIT `src/` INSTEAD AND RUN `npm run build`
 
 ----
 ## NOTE

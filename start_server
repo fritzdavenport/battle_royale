@@ -4,4 +4,4 @@ rm -rf node_modules
 npm install
 rm -f globals.json
 gpg globals.json.gpg
-npm run serve
+npm run serve &
