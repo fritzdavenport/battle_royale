@@ -1,0 +1,6 @@
+globals.json
+node_modules
+renders
+.idea
+package-lock.json
+test_resources

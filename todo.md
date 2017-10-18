@@ -1,0 +1,12 @@
+----
+- server
+- [ ] ec2
+- [ ] email on downtime (autoscale to 1?)
+- [ ] security groups
+- - in on 80+443, out on 80+443
+-----
+- code
+- [ ] logging? 
+- [ ] full test of email? 
+- [ ] terraform??? ansible?
+- [ ] full test of stack
