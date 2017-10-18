@@ -6,7 +6,7 @@ chai.should();
 import {Renderer} from "../src/util/renderer";
 const fs = require("fs");
 
-const test_render_name = "./test_resources/renders/monster/JES_003+SAN_002.png";
+const test_render_name = "../test_resources/renders/monster/JES_003+SAN_002.png";
 
 function delTestImage() {
     child_process.execSync(`rm -f ${test_render_name}`)
