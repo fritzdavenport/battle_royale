@@ -45,4 +45,5 @@ Tests will write any files to `test_resources/`
 - `git clone https://github.com/fritzdavenport/battle_royale.git`
 - `cd battle_royale`
 - `npm install`
+- `gpg globals.json.gpg`
 - `npm start`
