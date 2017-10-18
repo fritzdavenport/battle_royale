@@ -44,6 +44,4 @@ Tests will write any files to `test_resources/`
 - install node, npm, git `curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash - && sudo yum -y install nodejs npm git`
 - `git clone https://github.com/fritzdavenport/battle_royale.git`
 - `cd battle_royale`
-- `npm install`
-- `gpg globals.json.gpg`
-- `npm start`
+- `sh start_server` -- note, this will reinstall deps and unpackage secrets each time

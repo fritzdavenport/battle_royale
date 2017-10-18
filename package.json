@@ -6,8 +6,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require babel-register test",
     "start": "sudo babel-node index.js",
-    "build": "babel lib -d dist --presets es2015",
-    "serve": "node dist/index.js"
+    "build": "babel src -d dist --presets env",
+    "serve": "sudo node dist/index.js"
   },
   "repository": {
     "type": "git",
