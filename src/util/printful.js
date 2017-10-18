@@ -1,6 +1,6 @@
 'use strict';
 
-let globals = require('../globals');
+let globals = require('../../globals');
 
 class Printful {
     static getPrintfulID(cut, size) {

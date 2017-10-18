@@ -2,7 +2,7 @@
 
 let chai = require('chai');
 chai.should();
-let Printful = require("../util/printful").Printful;
+let Printful = require("../src/util/printful").Printful;
 
 describe('Printful', () => {
     describe('getPrintfulCutID', () => {

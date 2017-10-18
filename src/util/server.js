@@ -5,12 +5,12 @@ import {Renderer} from "./renderer";
 import {Notifier} from "./notifier";
 
 let request = require('request');
-let globals = require("../globals.json");
+let globals = require("../../globals.json");
 
 class Server {
 	static transformSanitizeAndSend(req, res, next) {
 		console.log(`NEW ORDER FROM SHOPIFY \n details--> ${req.params} \n ${req.params.email} \n ${req.params.total_price}`);
-		res.send(req.params); // todo - is this the right thing to send back...? The docs just say "200"
+		res.send(req.params); // todo - is this the right thing to send back...? The docs just say any "200"
 
 		try {
             let printfulObject = Printful.getPrintfulRequestObject(req.params);

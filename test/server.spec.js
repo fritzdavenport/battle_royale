@@ -2,7 +2,7 @@
 
 let chai = require('chai');
 chai.should();
-let Server = require("../util/server");
+let Server = require("../src/util/server");
 
 const SHOPIFY_REQUEST = {
     "body": {

@@ -3,7 +3,7 @@
 let chai = require('chai');
 const assert = require("assert");
 chai.should();
-let Character = require("../util/character").Character;
+let Character = require("../src/util/character").Character;
 
 const LINE_ITEM_PROPERTIES = {"properties": [{"name": "Cut", "value": "Womens Shirt"}, {"name": "Size", "value": "XL"}, {"name": "Left", "value": "Jesus Christ"}, {"name": "Right", "value": "Santa Clause"}, {"name": "Jesus Christ", "value": "Anointed Son"}, {"name": "Santa Clause", "value": "Krampus"}]};
 

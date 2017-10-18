@@ -1,5 +1,5 @@
 
-let globals = require("../globals.json");
+let globals = require("../../globals.json");
 const nodemailer = require("nodemailer");
 let aws = require('aws-sdk');
 

@@ -3,7 +3,7 @@
 let chai = require('chai');
 const child_process = require("child_process");
 chai.should();
-import {Renderer} from "../util/renderer";
+import {Renderer} from "../src/util/renderer";
 const fs = require("fs");
 
 const test_render_name = "./test_resources/renders/monster/JES_003+SAN_002.png";

@@ -1,8 +1,8 @@
 import restify from "restify";
 import {Server} from "./util/server";
 
-let globals = require("./globals.json");
-let conf = require("./package.json");
+let globals = require("../globals.json");
+let conf = require("../package.json");
 
 const server = restify.createServer({
   name: conf.name,

@@ -1,11 +1,11 @@
 
 const fs = require("fs");
 const child_process = require("child_process");
-let globals = require("../globals.json");
+let globals = require("../../globals.json");
 
 class Renderer {
     static generateImageFromCharacters(characters, isTest = false){
-        let render_dir = `${isTest?"test_resources":"."}/renders/monster`;
+        let render_dir = `${isTest?"../test_resources":"../"}/renders/monster`;
         let image_id = `${characters.left.id.toUpperCase()}_${characters.left.var.toUpperCase()}+${characters.right.id.toUpperCase()}_${characters.right.var.toUpperCase()}`;
         let render_name = `${render_dir}/${image_id}.png`;
         if (fs.existsSync(characters.left.image_url) && fs.existsSync(characters.right.image_url)){
