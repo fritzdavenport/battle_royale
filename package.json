@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require babel-register test",
-    "start": "babel-node index.js"
+    "start": "sudo babel-node index.js"
   },
   "repository": {
     "type": "git",
