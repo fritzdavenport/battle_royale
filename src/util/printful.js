@@ -13,6 +13,7 @@ class Printful {
 
     static getPrintfulRequestObject(params) {
         return {
+            external_id : params.order_number,
             shipping: "STANDARD",
             "recipient": {
                 "name": params.shipping_address.name,

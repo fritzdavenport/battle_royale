@@ -33,8 +33,8 @@ describe('Character', () => {
 
     describe('getLocalImageUrl', () => {
         it('should behave as expected', () => {
-            Character.getLocalImageUrl(1, 2, false).should.equal("../src_images/1_2_R.png");
-            Character.getLocalImageUrl("a", "abc", true).should.equal("../src_images/A_ABC_L.png");
+            Character.getLocalImageUrl(1, 2, false).should.equal("./src_images/1_2_R.png");
+            Character.getLocalImageUrl("a", "abc", true).should.equal("./src_images/A_ABC_L.png");
             assert.throws(() => {
                 Character.getLocalImageUrl(null, null, true)
             }, Error, "");

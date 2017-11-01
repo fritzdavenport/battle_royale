@@ -1,5 +1,5 @@
-// var CUR_SERVER = "localhost";
-var CUR_SERVER = "fritzdavenport.com";
+ var CUR_SERVER = "localhost";
+// var CUR_SERVER = "fritzdavenport.com";
 
 var request = require('request');
 

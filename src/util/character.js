@@ -28,7 +28,7 @@ class Character {
 
     static getLocalImageUrl(id, variant, isLeft = false){
         try {
-            return `../src_images/${id.toString().toUpperCase()}_${variant.toString().toUpperCase()}_${isLeft ? 'L' : 'R'}.png`
+            return `./src_images/${id.toString().toUpperCase()}_${variant.toString().toUpperCase()}_${isLeft ? 'L' : 'R'}.png`
         } catch (e){
             throw new Error(`Specified Image Combination Malformed ${id}, ${variant}`)
         }

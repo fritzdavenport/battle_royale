@@ -22,14 +22,22 @@ class Server {
                     'Content-Type': ' application/json',
                     'Authorization': `Basic ${globals.PRINTFUL_AUTH_TOKEN}`
                 }
-            }, function optionalCallback(err, _, __) { if (err) throw err; });
+            }, function optionalCallback(err, response, body) {
+                if (err) throw err;
+                if (body !== null &&  body.code !== 200) throw new Error(JSON.stringify(body));
+            });
         } catch (err){
-		    Notifier.sendErrorMail(err)
+		    console.log(err);
+		    Notifier.sendErrorMail(err, req)
         }
 
 	}
 
     static parseLineItems(line_item) {
+	    if (!line_item.hasOwnProperty("properties")){
+	        throw new Error("Received Line Item without Properties")
+        }
+
         let item = {
             "cut": _.find(line_item.properties, {'name': "Cut"})["value"],
             "size": _.find(line_item.properties, {'name': "Size"})["value"],
@@ -41,8 +49,8 @@ class Server {
             "external_id": line_item.external_id,
             "quantity": line_item.quantity,
             "files": [
-                {"url": this.getServerUrlForMonster( Renderer.generateImageFromCharacters(item.characters) )},
-                {"type": "inside", "url": this.getServerUrlForInside(item.size)} /* todo - ????*/
+                {"url": Server.getServerUrlForMonster( Renderer.generateImageFromCharacters(item.characters) )},
+                // {"type": "inside", "url": Server.getServerUrlForInside(item.size)} /* todo - ????*/
             ]
         };
     }
